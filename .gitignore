@@ -9,3 +9,7 @@
 *.ipr
 /out/
 /target/
+
+### Log ###
+/log/
+*.log
