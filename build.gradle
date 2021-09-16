@@ -13,6 +13,12 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
@@ -30,6 +36,9 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit.vintage.engine'
     }
+
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'   // log4j2
+//    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.10.3'   // log4j2
 }
 
 test {
