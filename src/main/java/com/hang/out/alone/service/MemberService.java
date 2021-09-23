@@ -11,7 +11,6 @@ public class MemberService {
     private MemberMapper mapper;
 
     public void createMember(Member member) {
-
     }
 
     //예외처리 메소드들
@@ -35,8 +34,8 @@ public class MemberService {
         return mapper.getAccount();
     }
 
-    public Member insertMember() {
-        return mapper.createAccount();
+    public Member insertMember(Member member) {
+        return mapper.createAccount(member);
     }
 
     private void updateMember() {
@@ -46,6 +45,5 @@ public class MemberService {
     private void deleteMember() {
 
     }
-
 
 }

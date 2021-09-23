@@ -5,8 +5,8 @@
 
 <mapper namespace="com.hang.out.alone.mapper.MemberMapper">
     <select id="createAccount" resultType = "Member">
-        select *
-        from members
+        INSERT INTO members(account, password, address, member_type)
+        VALUES (#{account}, #{password}, #{address}, #{memberType})
     </select>
     <select id="getAccount" resultType = "Member">
         select *
