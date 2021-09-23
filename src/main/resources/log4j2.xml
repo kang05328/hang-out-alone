@@ -8,7 +8,7 @@
         <Console name="console" target="system_out">
             <PatternLayout pattern="${pattern}"/>
         </Console>
-        <RollingFile name="rollingFile" ignoreExceptions="false" filePattern="${baseDir}/%d{yyyy-MM-dd}.%i.log" fileName="${baseDir}/collector.log">
+        <RollingFile name="rollingFile" ignoreExceptions="false" filePattern="${baseDir}/%d{yyyy-MM-dd}.%i.log" fileName="${baseDir}/hang-out-alone.log">
             <PatternLayout pattern="${pattern}" charset="UTF-8"/>
             <Policies>
                 <SizeBasedTriggeringPolicy size="100 MB"/>
