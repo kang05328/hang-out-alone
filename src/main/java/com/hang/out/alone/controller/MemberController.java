@@ -5,7 +5,7 @@ import com.hang.out.alone.service.MemberService;
 import org.springframework.web.bind.annotation.*;
 
 
-//@RestController("/account") API 설계 확정후 사용여부 결정
+@RestController
 public class MemberController {
     private final MemberService memberService;
 
@@ -14,14 +14,10 @@ public class MemberController {
     }
 
     //TODO : 회원 가입
-    @PostMapping("/account")
-    public void signIn(String id, String pw, String address, int memType) {
-//        Member member = new Member();
-//        member.setAccount(id);
-//        member.setPassword(pw);
-//        member.setAddress(address);
-//        member.setMemberType(memType);
-//        memberService.createMember(member);
+    @PostMapping(value = "/account")
+    public void signIn(@RequestBody Member member) {
+        System.out.println(member.getAccount());
+        memberService.createMember(member);
     }
 
 //    @GetMapping("/account")
