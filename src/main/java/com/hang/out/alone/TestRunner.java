@@ -17,16 +17,16 @@ public class TestRunner implements ApplicationRunner {
 
     public void run(ApplicationArguments args) throws Exception {
         //TEST: MemberService
-        Member getMember = ms.getMember();
+//        Member getMember = ms.getMember();
 
-        Member newMember = new Member();
-        newMember.setAccount("creatTest");
-        newMember.setPassword("testpw12321");
-        newMember.setAddress("homeless");
-        newMember.setMemberType(2);
-        ms.insertMember(newMember);
+//        Member newMember = new Member();
+//        newMember.setAccount("creatTest");
+//        newMember.setPassword("testpw12321");
+//        newMember.setAddress("homeless");
+//        newMember.setMemberType(2);
+//        ms.insertMember(newMember);
 
-        log.info("getMem Test : {}", getMember.getPassword());
+//        log.info("getMem Test : {}", getMember.getPassword());
 //        log.info("signIn Test : {}", signMember.getAccount());
 
     }
