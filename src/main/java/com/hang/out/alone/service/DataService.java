@@ -29,7 +29,8 @@ public class DataService {
         this.objectMapper = objectMapper;
     }
 
-    //TODO : 에러로그
+    // TODO : 에러로그
+    // TODO : 해당 api 값이 항상 2개 대체 api 찾아야 할 듯.
     public String cultureEvent() {
         // TODO : api key 값 분리
         // TODO : 가져오는 범위 페이징 처리
@@ -44,7 +45,6 @@ public class DataService {
         String path = String.format("/7a6c5a77616b616e34354d4b447664/json/SearchCulturalFacilitiesAddressService/1/1000");
         return request(path);
         // TODO : 데이터 파싱 필요 String to Json
-        // return objectMapper.readValue(Objects.requireNonNull(result), new TypeReference<List<CulturePlace>>() {});
     }
 
     private String request(String path) {
