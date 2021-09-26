@@ -30,6 +30,9 @@ public class MemberService {
         log.info("new account created : {}", member.getAccount());
     }
 
+    public void loginMember(Member member) {
+    }
+
     private boolean isValidId(String account) {
         if(account.length()<5 || account.length()>20) {
             //TODO 예외처리
@@ -58,8 +61,8 @@ public class MemberService {
         return true;
     }
 
-    public Member getMember() {
-        return mapper.getAccount();
+    public Member getMember(Member member) {
+        return mapper.getAccount(member);
     }
 
     public Member insertMember(Member member) {

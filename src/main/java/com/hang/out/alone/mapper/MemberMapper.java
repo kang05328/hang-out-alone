@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MemberMapper {
     Member createAccount(Member member);
-    Member getAccount();
+    Member getAccount(Member member);
 }

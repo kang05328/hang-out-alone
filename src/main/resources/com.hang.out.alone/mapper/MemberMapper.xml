@@ -11,6 +11,11 @@
     <select id="getAccount" resultType = "Member">
         select *
         from members
+        <where>
+            <if test="account!=null">
+                AND account = #{account}
+            </if>
+        </where>
     </select>
 
 </mapper>
