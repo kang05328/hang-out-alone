@@ -42,7 +42,7 @@ public class DataService {
     public String culturePlace() {
         // TODO : api key 값 분리
         // TODO : 가져오는 범위 페이징 처리
-        String path = String.format("/7a6c5a77616b616e34354d4b447664/json/SearchCulturalFacilitiesAddressService/1/1000");
+        String path = String.format("/7a6c5a77616b616e34354d4b447664/json/SearchCulturalFacilitiesAddressService/1/100");
         return request(path);
         // TODO : 데이터 파싱 필요 String to Json
     }
