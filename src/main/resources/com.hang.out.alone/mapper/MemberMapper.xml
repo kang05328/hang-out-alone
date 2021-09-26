@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hang.out.alone.mapper.MemberMapper">
+    <select id="createAccount" resultType = "Member">
+        INSERT INTO members(account, password, address, member_type)
+        VALUES (#{account}, #{password}, #{address}, #{memberType})
+    </select>
+    <select id="getAccount" resultType = "Member">
+        select *
+        from members
+        <where>
+            <if test="account!=null">
+                AND account = #{account}
+            </if>
+        </where>
+    </select>
+
+</mapper>

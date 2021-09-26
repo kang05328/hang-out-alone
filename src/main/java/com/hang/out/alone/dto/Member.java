@@ -6,8 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Member {
-    private String memberId;
+    private String account;
     private String password;
     private String address;
-    private String memberType;
+    private int memberType;
 }

@@ -1,17 +1,46 @@
 package com.hang.out.alone.controller;
 
+import com.hang.out.alone.dto.Member;
 import com.hang.out.alone.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-//Controller, RestController 차이점 확인
-@Controller("/member")
+@RestController
 public class MemberController {
+    private final MemberService memberService;
 
-    //TODO : 회원 가입
-    @RequestMapping("/sign-in")
-    public void signIn() {
-
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
     }
+
+    //TODO 로그인
+    @GetMapping(value = "/account")
+    public void logIn(@RequestBody Member member) {
+        
+    }
+    
+    //TODO : 회원 가입
+    @PostMapping(value = "/account")
+    public void signIn(@RequestBody Member member) {
+        memberService.createMember(member);
+    }
+
+//    @GetMapping("/account")
+//    public void logIn() {
+//
+//    }
+//
+//    @DeleteMapping("/account")
+//    public void delete() {
+//
+//    }
+
+//    @GetMapping("/user")
+//    public Member getMember() {
+//        return memberService.getMember();
+//    }
+
+//    @PostMapping
+//    public Member updateMember() {
+//    }
+
 }
