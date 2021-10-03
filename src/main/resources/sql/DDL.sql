@@ -13,7 +13,7 @@ CREATE TABLE address (
 
 -- create member table
 CREATE TABLE members (
-member_id VARCHAR(20) primary key,
+account VARCHAR(50) primary key,
 password VARCHAR(20) NOT NULL,
 address VARCHAR(50) NOT NULL,
 category_id_1 integer NULL,
